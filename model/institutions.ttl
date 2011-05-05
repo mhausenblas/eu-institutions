@@ -1,0 +1,46 @@
+@prefix : <http://institutions.publicdata.eu#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <ttp://www.w3.org/2000/01/rdf-schema#> .
+@prefic dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+
+# Organisational hierarchy
+
+:EU_Institution a org:Organization;
+	skos:prefLabel "Institution of the European Union"@en;
+	dcterms:hasPart :European_Parliament;
+	.
+	
+:ConsultativeBody a org:Organization;
+	skos:prefLabel "Consultative body of the European Union"@en .
+	
+:FinancialBody a org:Organization;
+	skos:prefLabel "Financial body of the European Union"@en . 
+
+:InterinstitutionalBody a org:Organization;
+	skos:prefLabel "Interinstitutional body of the European Union"@en .
+
+:DecentralisedBody a org:Organization;
+	skos:prefLabel "Decentralised body of the European Union (Agency)"@en .
+
+:SpecialisedBody a org:Organization;
+	skos:prefLabel "Specialised body of the European Union"@en .
+
+# Institutions
+
+:European_Parliament a org:Organization;
+	skos:prefLabel "European Parliament"@en;
+	skos:altLabel "EP"@en;
+	foaf:page <http://www.europarl.europa.eu/news/public/default_en.htm>;
+	org:hasSite _:EP_Brussels_Site;
+	dc:description ""@en;
+	.
+	
+# Consultative Bodies
+
+# Sites
+
+_:EP_Brussels_Site a org:Site.
