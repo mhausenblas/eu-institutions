@@ -51,6 +51,7 @@
 :European_Parliament a :EU_Institution;
 	dc:title "European Parliament";
 	skos:altLabel "EP";
+	skos:altLabel "Europarl";
 	foaf:homepage <http://www.europarl.europa.eu/>;
 	org:hasSite _:EP_Brussels_Site;
 	dc:description "The European Parliament (EP) is elected by the citizens of the European Union to represent their interests.";
@@ -70,6 +71,7 @@
 	skos:altLabel "Commission";
 	dc:description "The European Commission is independent of national governments. Its job is to represent and uphold the interests of the EU as a whole. It drafts proposals for new European laws, which it presents to the European Parliament and the Council.";
 	owl:sameAs <http://dbpedia.org/resource/European_Commission>;
+	foaf:homepage <http://ec.europa.eu/>;
 	. 
 	
 :Court_of_Justice a :EU_Institution;
