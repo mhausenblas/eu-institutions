@@ -78,7 +78,7 @@
 	dc:title "Court of Justice";
 	skos:altLabel "Court of Justice of the European Communities";
 	skos:altLabel "Court";
-	dc:description "The Vour of Justice's job is to make sure that EU legislation is interpreted and applied in the same way in all EU countries, so that the law is equal for everyone. It ensures, for example, that national courts do not give different rulings on the same issue.";
+	dc:description "The Court of Justice's job is to make sure that EU legislation is interpreted and applied in the same way in all EU countries, so that the law is equal for everyone. It ensures, for example, that national courts do not give different rulings on the same issue.";
 	owl:sameAs <http://dbpedia.org/resource/European_Court_of_Justice>;
 	foaf:homepage <http://curia.europa.eu/>;
 	. 
