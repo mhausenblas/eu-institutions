@@ -21,16 +21,26 @@
 </head>
 <body about="http://institutions.publicdata.eu/#EU_Institutions_Bodies">
 	<div id="header">
-		<div id="menu"><a href="/">Home</a> | About </div>
+		<div id="menu"><a href="/">Home</a> | <a href="#eui-schema">Schema</a> </div>
 		<div>
 			<div class="site-title" property="dct:title">Institutions and Bodies of the European Union</div>
+			<div class="toc">
+				<a href="#ref_European_Institutions">European Institutions</a> | 
+				<a href="#ref_Consultative_Bodies">Consultative Bodies</a> |
+				<a href="#ref_Financial_Bodies">Financial Bodies</a> |
+				<a href="#ref_Interinstitutional_Bodies">Inter-institutional Bodies</a> |
+				<a href="#ref_Decentralised_Bodies">Decentralised Bodies</a> |
+				<a href="#ref_Specialised_Bodies">Specialised Bodies</a>
+			</div>
 		</div>
 	</div>
 
 	<div id="main">
 	
+		<h2 id="ref_European_Institutions">European Institutions</h2>
+		
 		<div about="http://institutions.publicdata.eu/#European_Parliament" typeof="eui:EU_Institution">
-			<h2 id="ref_European_Parliament" property="dct:title">European Parliament</h2>
+			<h3 id="ref_European_Parliament" property="dct:title">European Parliament</h3>
 			<div class="hidden-meta">
 				<span property="skos:altLabel">EP</span> | 
 				<a rel="owl:sameAs" href="http://en.wikipedia.org/wiki/European_Parliament" resource="http://dbpedia.org/resource/European_Parliament">http://en.wikipedia.org/wiki/European_Parliament</a>
@@ -38,14 +48,26 @@
 			<div class="homepage"><a rel="foaf:homepage" href="http://www.europarl.europa.eu/">http://www.europarl.europa.eu/</a></div>
 			<p property="dct:description">The European Parliament (EP) is elected by the citizens of the European Union to represent their interests.</p>
 		</div>
-	
+
+
+		<h2 id="ref_Consultative_Bodies">Consultative Bodies</h2>
+		<h2 id="ref_Financial_Bodies">Financial Bodies</h2>
+		<h2 id="ref_Interinstitutional_Bodies">Inter-institutional Bodies</h2>
+		<h2 id="ref_Decentralised_Bodies">Decentralised Bodies</h2>
+		<h2 id="ref_Specialised_Bodies">Specialised Bodies</h2>
 	</div>
 	
 	<div id="eui-schema">
-		<div>We are using the following concepts in this dataset:</div>
-		<div about="http://institutions.publicdata.eu/#EU_Institution">
-			<span rel="rdfs:subClassOf" resource="http://www.w3.org/ns/org#Organization"></span>
-			<span property="dct:title">Institution of the European Union</span>
+		<h3>Schema</h3>
+		<p>
+			Based on the <a href="http://www.w3.org/ns/org">Core Organization Ontology</a> we have defined a number of classes for EU-specific organization types.
+			<span id="show-eui-schema-details">Show details ...</span>
+		</p>
+		<div id="eui-schema-details">
+			<div about="http://institutions.publicdata.eu/#EU_Institution">
+				<span property="dct:title">Institution of the European Union</span>, which is a special kind of
+				<a rel="rdfs:subClassOf" href="http://www.w3.org/ns/org#Organization">org:Organization</a>.
+			</div>
 		</div>
 	</div>
 

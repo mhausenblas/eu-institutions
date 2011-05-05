@@ -6,10 +6,16 @@ body {
 }
 
 h2 { 
-	font-size: 16pt;
+	font-size: 18pt;
+	margin-top: 2em;
+}
+
+h3 { 
+	font-size: 14pt;
 	margin: 0;
 	padding: 0;
 }
+
 
 img { 
 	border: 0px solid white; 
@@ -44,10 +50,21 @@ a:hover {
 }
 
 #eui-schema {
-	display: none;
-	padding: 0 0 0 0; 
+	border-top: 1px solid #ccc;
+	font-size: 80%;
+	padding: 0; 
 	text-align: left;
-	margin: 1em 3em 1em 3em;
+	margin: 4em;
+}
+
+#eui-schema-details {
+	display: none;
+	padding: 1em;
+}
+
+#show-eui-schema-details {
+	cursor: pointer;
+	color: #4183C4; 
 }
 
 #about { 
@@ -81,4 +98,10 @@ a:hover {
 	text-align: center;
 	margin: 1em;
 	text-shadow: 0 1px 0 #aaa;
+}
+
+.toc {
+	font-size: 12pt;
+	text-align: center;
+	margin: 1em;
 }
