@@ -37,14 +37,13 @@
 :Police_And_Judicial_Cooperation_In_criminal_Matters_Agency rdfs:subClassOf :Regulatory_Agency;
 	dc:title "Police and judicial cooperation in criminal matters agency" .
 
-
 :Executive_Agency rdfs:subClassOf :Decentralised_Body;
 	dc:title "Executive Agency" .
 
 :EURATOM_Agency rdfs:subClassOf :Decentralised_Body;
 	dc:title "EURATOM Agency".
 
-:Specialised_Body rdfs:subClassOf  org:Organization;
+:Specialised_Body rdfs:subClassOf org:Organization;
 	dc:title "Specialised body of the European Union" .
 
 # EU Institutions
@@ -60,47 +59,75 @@
 
 :EU_Council a :EU_Institution;
 	dc:title "Council of the European Union";
+	owl:sameAs <http://dbpedia.org/resource/Council_of_the_European_Union>;
 	.
 
 :European_Commission a :EU_Institution;
 	dc:title "European Commision";
+	owl:sameAs <http://dbpedia.org/resource/European_Commission>;
 	. 
 	
 :Court_of_Justice a :EU_Institution;
 	dc:title "Court of Justice of the European Communities";
+	owl:sameAs <http://dbpedia.org/resource/European_Court_of_Justice>;
 	. 
 
 :Court_of_Auditors a :EU_Institution;
 	dc:title "Court of Auditors";
+	owl:sameAs <http://dbpedia.org/resource/Court_of_Auditors>;
 	. 
 	
 # Consultative Bodies
 
-:European_Economic_and_Social_Committee a :Consultative_Body.
+:European_Economic_and_Social_Committee a :Consultative_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Economic_and_Social_Committee>;
+	.
 
-:Committee_Of_The_Regions a :Consultative_Body.
-
+:Committee_Of_The_Regions a :Consultative_Body;
+	owl:sameAs <http://dbpedia.org/resource/Committee_of_the_Regions>;
+	.
+	
 # Financial Bodies
 
-:Investment_Bank a :Financial_Body.
-:Investment_Fund a :Financial_Body.
-:Central_Bank a :Financial_Body.
+:Investment_Bank a :Financial_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Investment_Bank>;
+	.
+	
+:Investment_Fund a :Financial_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Investment_Fund>;
+	.
 
+:Central_Bank a :Financial_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Central_Bank>;
+	.
+	
 # Interinstitutional Bodies
 
-:Publications_Office a :Interinstitutional_Body.
-:European_Personnel_Selection_Office a :Interinstitutional_Body.
-:European_Administrative_School a  :Interinstitutional_Body.
+:Publications_Office a :Interinstitutional_Body;
+	owl:sameAs <http://dbpedia.org/resource/Publications_Office_of_the_European_Union>;
+	.
+	
+:European_Personnel_Selection_Office a :Interinstitutional_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Personnel_Selection_Office>;
+	.
+	
+:European_Administrative_School a  :Interinstitutional_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Administrative_School>;
+	.
 
 # Decentralised Bodies
 
 
 # Specialised Bodies
 
-:European_Ombudsman a :Specialised_Body.
-:European_Data_Protection_Supervisor a :Specialised_Body.
+:European_Ombudsman a :Specialised_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Ombudsman>;
+	.
+	
+:European_Data_Protection_Supervisor a :Specialised_Body;
+	owl:sameAs <http://dbpedia.org/resource/European_Data_Protection_Supervisor>;
+	.
 
 # Sites
 
 _:EP_Brussels_Site a org:Site.
-
