@@ -9,7 +9,6 @@ h2 {
 	font-size: 16pt;
 	margin: 0;
 	padding: 0;
-	text-shadow: 0 1px 0 #ccc;
 }
 
 img { 
@@ -39,7 +38,13 @@ a:hover {
 }
 
 #main { 
-	background: #fff;
+	padding: 0 0 0 0; 
+	text-align: left;
+	margin: 1em 3em 1em 3em;
+}
+
+#eui-schema {
+	display: none;
 	padding: 0 0 0 0; 
 	text-align: left;
 	margin: 1em 3em 1em 3em;
@@ -52,25 +57,6 @@ a:hover {
 	margin: 1em 8em 1em 8em;
 }
 
-
-
-#out {
-	display: none;
-}
-
-#dir {
-	width: 15%;
-	float: left;
-	margin: 0 .5em 0 0;
-}
-
-#details {
-	float: right;
-	width: 80%;
-	margin: 1em 0 0 0;
-	position: relative;
-}
-
 #footer {
 	display: block;
 	position: static;
@@ -81,59 +67,18 @@ a:hover {
 	color: #aaa;
 }
 
-
-.metainfo {
+.hidden-meta {
 	display: none;
 }
 
-.scell {
-	cursor: pointer;
-	border-top: 1px solid #e6e6e6;
-	background: #f6f6f6;
-	margin: 1em 0 0 0;
-	padding: .3em;
-	font-size: 10pt;
+.homepage {
+	font-size: 80%;
+	margin: 0;
 }
 
 .site-title {
-	font-family: 'Cabin Sketch', arial, sans-serif; 
 	font-size: 32pt;
 	text-align: center;
 	margin: 1em;
+	text-shadow: 0 1px 0 #aaa;
 }
-
-.URI {
-	font-size: 90%;
-	margin: 0 0 1em 0;
-}
-
-.category {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	font-family: 'Cabin Sketch', arial, sans-serif; 
-	font-size: 40pt;
-	color: #e3e3e3;	
-}
-
-.comment {
-	font-size: 90%;
-	color: #999;
-	margin: 0 0 0 .5em;
-}
-
-.ep {
-	margin: 1em 0 0 0;
-	text-align: justify;
-}
-
-.ssimage {
-	border: 5px solid #f0f0f0;
-	-moz-box-shadow: 3px 3px 4px #000;
-	-webkit-box-shadow: 3px 3px 4px #000;
-	-moz-border-radius: 4px 4px 4px 4px;
-	-webkit-border-radius: 4px 4px 4px 4px;
-	float: right;
-	margin: 0 0 0 2em;
-}
-
