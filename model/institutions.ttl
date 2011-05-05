@@ -53,13 +53,14 @@
 	skos:altLabel "EP";
 	foaf:homepage <http://www.europarl.europa.eu/>;
 	org:hasSite _:EP_Brussels_Site;
-	dc:description "";
+	dc:description "The European Parliament (EP) is elected by the citizens of the European Union to represent their interests.";
 	owl:sameAs <http://dbpedia.org/resource/European_Parliament>;
 	.
 
 :EU_Council a :EU_Institution;
 	dc:title "Council of the European Union";
 	skos:altLabel "Council";
+	dc:description "The Council of the European Union is the EU's main decision-making body. It represents the member states, and its meetings are attended by one minister from each of the EU’s national governments.";
 	owl:sameAs <http://dbpedia.org/resource/Council_of_the_European_Union>;
 	foaf:homepage <http://www.consilium.europa.eu/>
 	.
@@ -67,6 +68,7 @@
 :European_Commission a :EU_Institution;
 	dc:title "European Commision";
 	skos:altLabel "Commission";
+	dc:description "The European Commission is independent of national governments. Its job is to represent and uphold the interests of the EU as a whole. It drafts proposals for new European laws, which it presents to the European Parliament and the Council.";
 	owl:sameAs <http://dbpedia.org/resource/European_Commission>;
 	. 
 	
@@ -74,12 +76,14 @@
 	dc:title "Court of Justice";
 	skos:altLabel "Court of Justice of the European Communities";
 	skos:altLabel "Court";
+	dc:description "The Vour of Justice's job is to make sure that EU legislation is interpreted and applied in the same way in all EU countries, so that the law is equal for everyone. It ensures, for example, that national courts do not give different rulings on the same issue.";
 	owl:sameAs <http://dbpedia.org/resource/European_Court_of_Justice>;
 	foaf:homepage <http://curia.europa.eu/>;
 	. 
 
 :Court_of_Auditors a :EU_Institution;
 	dc:title "Court of Auditors";
+	dc:description "The Court of Auditor’s job is to check that EU funds, which come from the taxpayers, are properly collected and that they are spent legally, economically and for the intended purpose. Its aim is to ensure that the taxpayers get maximum value for their money, and it has the right to audit any person or organisation handling EU funds.";
 	owl:sameAs <http://dbpedia.org/resource/Court_of_Auditors>;
 	foaf:homepage <http://eca.europa.eu/>;
 	. 
@@ -89,6 +93,7 @@
 :European_Economic_and_Social_Committee a :Consultative_Body;
 	dc:title "European Economic and Social Committee";
 	skos:altLabel "EESC";
+	dc:description "The European Economic and Social Committee (EESC) is an advisory body representing employers, trade unions, farmers, consumers and the other interest groups that collectively make up ‘organised civil society’. It presents their views and defends their interests in policy discussions with the Commission, the Council and the European Parliament.";
 	owl:sameAs <http://dbpedia.org/resource/European_Economic_and_Social_Committee>;
 	foaf:homepage <http://www.eesc.europa.eu/>;
 	.
@@ -96,6 +101,7 @@
 :Committee_Of_The_Regions a :Consultative_Body;
 	dc:title "Committee of the Regions";
 	skos:altLabel "CoR";
+	dc:description "The Committee of the Regions (CoR) is an advisory body composed of representatives of Europe’s regional and local authorities. The CoR has to be consulted before EU decisions are taken on matters such as regional policy, the environment, education and transport – all of which concern local and regional government.";
 	owl:sameAs <http://dbpedia.org/resource/Committee_of_the_Regions>;
 	foaf:homepage <http://www.cor.europa.eu/>;
 	.
@@ -105,6 +111,7 @@
 :Investment_Bank a :Financial_Body;
 	dc:title "European Investment Bank";
 	skos:altLabel "EIB";
+	dc:description "The European Investment Bank's job is to lend money for projects of European interest (such as rail and road links, airports, or environmental schemes), particularly in the less well-off regions, candidate countries and the developing world. It also provides credit for investment by small businesses.";
 	owl:sameAs <http://dbpedia.org/resource/European_Investment_Bank>;
 	foaf:homepage <http://www.eib.europa.eu/>;
 	.
@@ -112,6 +119,7 @@
 :Investment_Fund a :Financial_Body;
 	dc:title "European Inverstment Fund";
 	skos:altLabel "EIF";
+	dc:description "The European Investment Fund (EIF) was set up to help small businesses.";
 	owl:sameAs <http://dbpedia.org/resource/European_Investment_Fund>;
 	foaf:homepage <http://www.eif.europa.eu/>;
 	.
@@ -119,6 +127,7 @@
 :Central_Bank a :Financial_Body;
 	dc:title "European Central Bank";
 	skos:altLabel "ECB";
+	dc:description "The European Central Bank's job is to manage the euro – the EU’s single currency. The ECB is also responsible for framing and implementing the EU’s economic and monetary policy.";
 	owl:sameAs <http://dbpedia.org/resource/European_Central_Bank>;
 	foaf:homepage <http://www.ecb.int/>;
 	.
@@ -128,6 +137,7 @@
 :Publications_Office a :Interinstitutional_Body;
 	dc:title "Publications Office of the European Union";
 	skos:altLabel "Publications Office";
+	dc:description "The Publications Office of the European Union acts as the publishing house for the EU institutions, producing and distributing all official European Union publications, on paper and in digital form.";
 	owl:sameAs <http://dbpedia.org/resource/Publications_Office_of_the_European_Union>;
 	foaf:homepage <http://publications.europa.eu/>;
 	.
@@ -135,6 +145,7 @@
 :European_Personnel_Selection_Office a :Interinstitutional_Body;
 	dc:title "European Personnel Selection Office";
 	skos:altLabel "EPSO";
+	dc:description "The European Personnel Selection Office (EPSO) became operational in January 2003. Its task is to set competitive examinations for recruiting staff to work in all the EU institutions. This is more efficient than having each institution organise its own recruitment competitions. EPSO’s annual budget of roughly €21 million is 11% less than what the EU institutions used to spend on recruitment.";
 	owl:sameAs <http://dbpedia.org/resource/European_Personnel_Selection_Office>;
 	foaf:homepage <http://europa.eu/epso/>;
 	.
@@ -142,6 +153,7 @@
 :European_Administrative_School a  :Interinstitutional_Body;
 	dc:title "European Administrative School";
 	skos:altLabel "EAS";
+	dc:description "The European Administrative School (EAS) was set up on 10 February 2005. Its task is to provide training in specific areas for members of EU staff. Its courses are open to staff of all the EU institutions, thereby helping spread common values, promoting better understanding among EU staff and achieving economies of scale. It works in close cooperation with the training departments of all the institutions to avoid any duplication of effort.";
 	owl:sameAs <http://dbpedia.org/resource/European_Administrative_School>;
 	foaf:homepage <http://europa.eu/eas/>;
 	.
@@ -153,6 +165,7 @@
 
 :European_Ombudsman a :Specialised_Body;
 	dc:title "European Ombudsman";
+	dc:description "The European Ombudsman acts as an intermediary between the citizen and the EU authorities. He is entitled to receive and investigate complaints from EU citizens, businesses and organisations, and from anyone residing or having their registered office in an EU country.";
 	owl:sameAs <http://dbpedia.org/resource/European_Ombudsman>;
 	foaf:homepage <http://www.ombudsman.europa.eu/>;
 	.
@@ -160,6 +173,7 @@
 :European_Data_Protection_Supervisor a :Specialised_Body;
 	dc:title "European Data Protection Supervisor";
 	skos:altLabel "EDPS";
+	dc:description "The responsibility of the European Data Protection Supervisor (EDPS) is to make sure that all EU institutions and bodies respect people’s right to privacy when processing their personal data.";
 	owl:sameAs <http://dbpedia.org/resource/European_Data_Protection_Supervisor>;
 	foaf:homepage <http://www.edps.europa.eu/EDPSWEB/>;
 	.
