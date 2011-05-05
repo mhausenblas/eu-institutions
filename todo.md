@@ -9,3 +9,4 @@ Michael:
 Anja:
 
  1. modelling using [org vocab](http://www.epimorphics.com/public/vocabulary/org.html) etc. creating examples in models.ttl
+ 2. interlinking targets (conceptual)
