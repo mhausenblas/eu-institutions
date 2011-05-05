@@ -26,7 +26,7 @@
 	dc:title "Decentralised body of the European Union" .
 
 :Regulatory_Agency rdfs:subClassOf :Decentralised_Body;
-	dc:title "Decentralised body of the European Union" .
+	dc:title "Regulatory agency" .
 
 :Policy_Agency rdfs:subClassOf :Regulatory_Agency;
 	dc:title "Policy agency" .
@@ -51,7 +51,7 @@
 :European_Parliament a :EU_Institution;
 	dc:title "European Parliament";
 	skos:altLabel "EP";
-	foaf:homepage <http://www.europarl.europa.eu/news/public/default_en.htm>;
+	foaf:homepage <http://www.europarl.europa.eu/>;
 	org:hasSite _:EP_Brussels_Site;
 	dc:description "";
 	owl:sameAs <http://dbpedia.org/resource/European_Parliament>;
@@ -59,60 +59,91 @@
 
 :EU_Council a :EU_Institution;
 	dc:title "Council of the European Union";
+	skos:altLabel "Council";
 	owl:sameAs <http://dbpedia.org/resource/Council_of_the_European_Union>;
+	foaf:homepage <http://www.consilium.europa.eu/>
 	.
 
 :European_Commission a :EU_Institution;
 	dc:title "European Commision";
+	skos:altLabel "Commission";
 	owl:sameAs <http://dbpedia.org/resource/European_Commission>;
 	. 
 	
 :Court_of_Justice a :EU_Institution;
-	dc:title "Court of Justice of the European Communities";
+	dc:title "Court of Justice";
+	skos:altLabel "Court of Justice of the European Communities";
+	skos:altLabel "Court";
 	owl:sameAs <http://dbpedia.org/resource/European_Court_of_Justice>;
+	foaf:homepage <http://curia.europa.eu/>;
 	. 
 
 :Court_of_Auditors a :EU_Institution;
 	dc:title "Court of Auditors";
 	owl:sameAs <http://dbpedia.org/resource/Court_of_Auditors>;
+	foaf:homepage <http://eca.europa.eu/>;
 	. 
 	
 # Consultative Bodies
 
 :European_Economic_and_Social_Committee a :Consultative_Body;
+	dc:title "European Economic and Social Committee";
+	skos:altLabel "EESC";
 	owl:sameAs <http://dbpedia.org/resource/European_Economic_and_Social_Committee>;
+	foaf:homepage <http://www.eesc.europa.eu/>;
 	.
 
 :Committee_Of_The_Regions a :Consultative_Body;
+	dc:title "Committee of the Regions";
+	skos:altLabel "CoR";
 	owl:sameAs <http://dbpedia.org/resource/Committee_of_the_Regions>;
+	foaf:homepage <http://www.cor.europa.eu/>;
 	.
 	
 # Financial Bodies
 
 :Investment_Bank a :Financial_Body;
+	dc:title "European Investment Bank";
+	skos:altLabel "EIB";
 	owl:sameAs <http://dbpedia.org/resource/European_Investment_Bank>;
+	foaf:homepage <http://www.eib.europa.eu/>;
 	.
 	
 :Investment_Fund a :Financial_Body;
+	dc:title "European Inverstment Fund";
+	skos:altLabel "EIF";
 	owl:sameAs <http://dbpedia.org/resource/European_Investment_Fund>;
+	foaf:homepage <http://www.eif.europa.eu/>;
 	.
 
 :Central_Bank a :Financial_Body;
+	dc:title "European Central Bank";
+	skos:altLabel "ECB";
 	owl:sameAs <http://dbpedia.org/resource/European_Central_Bank>;
+	foaf:homepage <http://www.ecb.int/>;
 	.
 	
 # Interinstitutional Bodies
 
 :Publications_Office a :Interinstitutional_Body;
+	dc:title "Publications Office of the European Union";
+	skos:altLabel "Publications Office";
 	owl:sameAs <http://dbpedia.org/resource/Publications_Office_of_the_European_Union>;
+	foaf:homepage <http://publications.europa.eu/>;
 	.
 	
 :European_Personnel_Selection_Office a :Interinstitutional_Body;
+	dc:title "European Personnel Selection Office";
+	skos:altLabel "EPSO";
 	owl:sameAs <http://dbpedia.org/resource/European_Personnel_Selection_Office>;
+	foaf:homepage <http://europa.eu/epso/>;
 	.
 	
 :European_Administrative_School a  :Interinstitutional_Body;
+	dc:title "European Administrative School";
+	skos:altLabel "EAS";
 	owl:sameAs <http://dbpedia.org/resource/European_Administrative_School>;
+	foaf:homepage <http://europa.eu/eas/>;
 	.
 
 # Decentralised Bodies
@@ -121,11 +152,16 @@
 # Specialised Bodies
 
 :European_Ombudsman a :Specialised_Body;
+	dc:title "European Ombudsman";
 	owl:sameAs <http://dbpedia.org/resource/European_Ombudsman>;
+	foaf:homepage <http://www.ombudsman.europa.eu/>;
 	.
 	
 :European_Data_Protection_Supervisor a :Specialised_Body;
+	dc:title "European Data Protection Supervisor";
+	skos:altLabel "EDPS";
 	owl:sameAs <http://dbpedia.org/resource/European_Data_Protection_Supervisor>;
+	foaf:homepage <http://www.edps.europa.eu/EDPSWEB/>;
 	.
 
 # Sites
