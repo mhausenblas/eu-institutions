@@ -3,8 +3,9 @@ Michael:
 
  1. list of institutions in HTML based on [official EU page](http://europa.eu/institutions/inst/index_en.htm)
  2. mark up in RDFa (blocked on Anja's ACTION 1.)
- 3. SPARQL interface (rdflib)
- 4. lookup service
+ 3. VoID description
+ 4. SPARQL interface (rdflib)
+ 5. lookup service
 
 Anja:
 
