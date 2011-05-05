@@ -1,4 +1,4 @@
-@prefix : <http://institutions.publicdata.eu#/> .
+@prefix : <http://institutions.publicdata.eu/#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <ttp://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/terms/> .
