@@ -12,8 +12,5 @@ handlers:
   static_dir: css
 - url: /js
   static_dir: js
-- url: /api/.*
-  script: main.py
 - url: /.*
-  static_files: index.html
-  upload: index.html
+  script: main.py

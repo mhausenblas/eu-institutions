@@ -5,11 +5,11 @@ The main GAE script.
 @since: 2011-05-06
 @status: inital version
 """
+import sys
+import os
 import logging
 import cgi
-import os
-import platform,
-import sys
+import platform
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
@@ -17,7 +17,9 @@ from handler import *
 
 
 application = webapp.WSGIApplication([
-						('/api/', APIHandler)
+						(r'/format/(.*)$', FormatHandler),
+						(r'/', MainHandler),
+						(r'/.*', NotFoundHandler)
 					],
 					debug=False)
 
