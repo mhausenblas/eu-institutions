@@ -8,6 +8,8 @@ handlers:
   static_files: img/favicon.ico
   upload: img/favicon.ico
   mime_type: image
+- url: /img
+  static_dir: img
 - url: /css
   static_dir: css
 - url: /js
