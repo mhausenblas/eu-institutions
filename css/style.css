@@ -39,6 +39,15 @@ a:hover {
 }
 
 
+.entity a {
+	color: #d0d0d0;
+}
+
+.entity a:hover {
+	color: #4183C4;
+}
+
+
 #header { 
 	background: #fefefe;
 	margin: 0; 
@@ -90,6 +99,24 @@ a:hover {
 	text-align: center;
 	color: #aaa;
 }
+
+.entity {
+	cursor: pointer;
+	font-size: 8pt;
+	margin: 0 .3em 0 .3em;
+	padding: 0 .3em 0 .3em;
+	color: #d0d0d0;
+	border: 1px solid #d0d0d0;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+}
+
+.entity-hover {
+	color: #000;
+	border: 1px solid #000;
+}
+
 
 .hidden-meta {
 	display: none;

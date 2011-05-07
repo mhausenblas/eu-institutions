@@ -3,7 +3,7 @@ Michael:
 
  1. DONE list of institutions in HTML based on [official EU page](http://europa.eu/institutions/inst/index_en.htm)
  2. DONE mark up in RDFa
- 3. Make URI's explict
+ 3. DONE Make URI's explict
  4. VoID description
  5. add rdflib - RDF/XML, Turtle, SPARQL interface
  6. lookup service
