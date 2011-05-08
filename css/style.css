@@ -33,6 +33,10 @@ img {
 	border: 0px solid white; 
 }
 
+textarea {
+	margin: 1em;
+}
+
 a { 
 	color: #0066CC;
 	text-decoration: none; 
@@ -110,6 +114,10 @@ a:hover {
 	margin: 1em 8em 1em 8em;
 }
 
+#qresult {
+	margin: 0 1em 1em 1em;
+}
+
 #footer {
 	display: block;
 	position: static;
@@ -183,4 +191,9 @@ a:hover {
 	font-style: italic;
 	padding: 1em;
 	margin-top: 1em;
+}
+
+.qcmd {
+	text-align: left;
+	margin: 0 1em 1em 1em;
 }

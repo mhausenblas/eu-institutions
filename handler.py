@@ -18,12 +18,15 @@ import StringIO
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 
+import rdflib
+
 from rdflib import Graph
 from rdflib import Namespace
 from rdflib import plugin
 from rdflib.serializer import Serializer
 
 import rdfjson
+import rdfextras
 
 
 SUPPORTED_OUTPUT_FORMATS = ["rdf-xml", "ttl", "nt", "json"]
@@ -32,16 +35,41 @@ NAMESPACES = {	'void' : Namespace('http://rdfs.org/ns/void#'),
 				'eui' : Namespace('http://institutions.publicdata.eu/#')
 }
 
+# for RDF/JSON output:
 plugin.register("rdf-json-pretty", Serializer, "rdfjson.RdfJsonSerializer", "PrettyRdfJsonSerializer")
+# for SPARQL query support:
+plugin.register('sparql', rdflib.query.Processor, 'rdfextras.sparql.processor', 'Processor')
+plugin.register('sparql', rdflib.query.Result, 'rdfextras.sparql.query', 'SPARQLQueryResult')
 
-
-class NotFoundHandler(webapp.RequestHandler):
-	def get(self):
-		self.response.out.write(template.render('a404.html', None))
-		
 class MainHandler(webapp.RequestHandler):
 	def get(self):
 		self.response.out.write(template.render('index.html', None))
+
+class NotFoundHandler(webapp.RequestHandler):
+	def get(self):
+		self.error(404)
+		self.response.out.write(template.render('a404.html', None))
+
+class QueryHandler(webapp.RequestHandler):
+	def get(self, q):
+
+		if q == '':
+			self.response.out.write(template.render('query.html', None))
+		elif q == 'exec':
+			if not self.request.query_string == '':
+				qstr = urllib.unquote_plus(self.request.get('qstr'))
+				logging.info('[API] query request [%s] from IP [%s]' %(qstr, os.environ['REMOTE_ADDR']))
+				g = Graph()
+				g.parse(location = 'index.html', format="rdfa") # load the RDFa-based dataset
+				res = g.query(qstr)
+				for r in res:
+					row = ""
+					for v in r:
+						row = "".join([row, v])
+					self.response.out.write("".join(["<div style='font-size: 80%; margin: 1em 1em 1em 0;'>", str(row), "</div>"]))
+		else:
+			self.error(404)
+			self.response.out.write(template.render('a404.html', None))
 
 class FormatHandler(webapp.RequestHandler):
 	def get(self, format):
@@ -66,7 +94,7 @@ class FormatHandler(webapp.RequestHandler):
 				# based on https://bitbucket.org/okfn/openbiblio/src/tip/rdflib/
 				self.response.headers['Content-Type'] = 'application/json'
 				self.response.out.write(g.serialize(None, "rdf-json-pretty"))
-		elif format =="":
+		elif format =='':
 			self.response.out.write("<div>Supported output formats:</div><ul>")
 			for format in SUPPORTED_OUTPUT_FORMATS:
 				self.response.out.write("".join(["<li>", "<a href='../format/", format, "'>", format , "</a></li>"]))

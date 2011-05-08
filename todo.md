@@ -5,7 +5,7 @@ Michael:
  2. DONE mark up in RDFa
  3. DONE Make URI's explict
  4. DONE add rdflib and provide alternative formats: RDF/XML, Turtle, JSON, etc. 
- 5. SPARQL interface
+ 5. DONE SPARQL interface
  6. VoID description
  7. lookup service
 
