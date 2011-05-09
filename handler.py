@@ -50,6 +50,10 @@ class NotFoundHandler(webapp.RequestHandler):
 		self.error(404)
 		self.response.out.write(template.render('a404.html', None))
 
+class AboutHandler(webapp.RequestHandler):
+	def get(self, details):
+		self.response.out.write(template.render('about.html', None))
+
 class QueryHandler(webapp.RequestHandler):
 	def get(self, q):
 

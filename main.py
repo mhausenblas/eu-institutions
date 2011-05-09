@@ -17,6 +17,7 @@ from handler import *
 
 
 application = webapp.WSGIApplication([
+						(r'/about/(.*)$', AboutHandler),
 						(r'/query/(.*)$', QueryHandler),
 						(r'/format/(.*)$', FormatHandler),
 						(r'/', MainHandler),

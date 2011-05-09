@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xsd ="http://www.w3.org/2001/XMLSchema#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"  
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:ov="http://open.vocab.org/terms/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+  xmlns:org="http://www.w3.org/ns/org#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:eui="http://institutions.publicdata.eu/#"
+  xmlns:void="http://rdfs.org/ns/void#">
+<head>
+	<title>Institutions and Bodies of the European Union</title>
+	<link type="text/css" rel="stylesheet" href="/css/style.css" />
+</head>
+<body about="http://institutions.publicdata.eu/#EU_Institutions_Bodies" typeof="void:Dataset">
+	<div id="header">
+		<div id="menu">
+			<a href="/">Home</a>
+		</div>
+		<div>
+			<div class="site-title">
+				<a href="/"><img src="/img/logo_pdeu.png" alt="public data EU" /></a>
+				<span property="dct:title">Institutions and Bodies of the European Union</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="main">
+		<h2>About</h2>
+		<p style="display:none" property="dct:description">
+			This dataset defines Linked Data compatible URIs for major institutions and bodies of the European Union that can be used as identifiers in EU-related datasets.
+		</p>
+		<p>
+		<a rel="foaf:homepage" href="http://institutions.publicdata.eu/">This dataset</a> defines <a href="http://linkeddata.org">Linked Data</a> compatible URIs for major <a rel="rdfs:seeAlso" href="http://europa.eu/institutions/">institutions and bodies</a> of the <a rel="dct:subject" href="http://dbpedia.org/resource/European_Union">European Union</a>. These URIs, identifying <a rel="dct:subject" href="http://dbpedia.org/resource/Organization">organisations</a> on the <a rel="dct:subject" href="http://dbpedia.org/resource/Europe">European</a> level, can be used as canonical identifiers in datasets.
+		</p>
+		<h3>Examples</h3>
+		<p>
+			An example entity of this dataset is the <em>European Commission</em> with the URI: <a rel="void:exampleResource" href="http://institutions.publicdata.eu/#ec">http://institutions.publicdata.eu/#ec</a>.
+		</p>
+		<h3>Interlinking</h3>
+		<p>
+			The dataset contains the following data links:
+		</p>
+		<ul rel="void:subset">
+			<li about="http://institutions.publicdata.eu/about/#lsdbpedia" typeof="void:Linkset">
+				<span rel="void:target" resource="http://institutions.publicdata.eu/#EU_Institutions_Bodies">It</span> links with <a rel="void:linkPredicate" href="http://www.w3.org/2002/07/owl#sameAs">owl:sameAs</a> to <a rel="void:target" href="http://lod-cloud.net/dbpedia">DBpedia</a>.
+			</li>
+		</ul>
+		<h3>License</h3>
+		<p>
+			The dataset is available under the Public Domain Dedication and License (<a rel="dct:license" href="http://www.opendatacommons.org/licenses/pddl/">PDDL</a>).
+		</p>
+	</div>
+
+	<div id="footer">
+		A <a href="http://lod-cloud.net/">LOD dataset</a> brought to you by the <a href="http://latc-project.eu/">LATC Support Action</a> ·
+		<a href="https://github.com/mhausenblas/eu-institutions">Code</a> ·
+		<a href="http://latc-project.eu/contact">Contact</a>
+	</div>
+</body>
+</html>
+
+
+
+
+
