@@ -28,7 +28,12 @@ Go to [sparql.org](http://sparql.org/sparql.html) and paste in the following que
 The site is [CORS-enabled](http://enable-cors.org/), so you can directly use the data in your Web page. For a simple example how to use the JSON data from within a Web page, see the '[standalone json](https://github.com/mhausenblas/eu-institutions/blob/master/usage/standalone-json.html)' HTML file.
 
 ### Using the CSV data in a Google spreadsheet
+
 Import the [CSV data](http://eu-institutions.appspot.com/format/csv) in a Google spreadsheet.
+
+### Dataset metadata
+
+The dataset is described using [VoID](http://www.w3.org/TR/void/). See the [about.html](https://github.com/mhausenblas/eu-institutions/blob/master/about.html) file or via '[.well-known/void](http://eu-institutions.appspot.com/.well-known/void)' on the site itself.
 
 ## License
 

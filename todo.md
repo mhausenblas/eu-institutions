@@ -6,10 +6,11 @@ Michael:
  3. DONE Make URI's explict
  4. DONE add rdflib and provide alternative formats: RDF/XML, Turtle, JSON, etc. 
  5. DONE SPARQL interface
- 6. STARTED: VoID description (missing: vocab, publisher, well-known)
- 7. lookup service
+ 6. DONE: VoID description (also: .well-known/void)
+ 7. OPEN: redirect from  http://institutions.publicdata.eu with Soeren
 
 Anja:
 
  1. DONE modelling using [org vocab](http://www.epimorphics.com/public/vocabulary/org.html) etc. creating examples in models.ttl
  2. DONE interlinking targets (conceptual)
+ 3. OPEN: complete 'Decentralised Bodies'

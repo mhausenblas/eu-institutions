@@ -51,9 +51,19 @@ class NotFoundHandler(webapp.RequestHandler):
 		self.error(404)
 		self.response.out.write(template.render('a404.html', None))
 
+class WellKnownVoIDHandler(webapp.RequestHandler):
+	def get(self):
+		self.redirect("/about/void.ttl")
+
 class AboutHandler(webapp.RequestHandler):
 	def get(self, details):
-		self.response.out.write(template.render('about.html', None))
+		if details == "void.ttl": # someone trying to directly or via .well-known/void GET the VoID file
+			g = Graph()
+			g.parse(location = 'about.html', format="rdfa") # load the RDFa-based dataset description
+			self.response.headers['Content-Type'] = 'text/turtle'
+			self.response.out.write(g.serialize(format="turtle"))
+		else:
+			self.response.out.write(template.render('about.html', None))
 
 class UsageHandler(webapp.RequestHandler):
 	def get(self, upath):
