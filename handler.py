@@ -14,6 +14,7 @@ import platform
 import urllib
 import urllib2
 import StringIO
+import csv
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
@@ -29,7 +30,7 @@ import rdfjson
 import rdfextras
 
 
-SUPPORTED_OUTPUT_FORMATS = ["rdf-xml", "ttl", "nt", "json"]
+SUPPORTED_OUTPUT_FORMATS = ["rdf-xml", "ttl", "nt", "json", "csv"]
 
 NAMESPACES = {	'void' : Namespace('http://rdfs.org/ns/void#'),
 				'eui' : Namespace('http://institutions.publicdata.eu/#')
@@ -85,6 +86,7 @@ class FormatHandler(webapp.RequestHandler):
 			g.bind('eui', NAMESPACES['eui'], True)
 			g.parse(location = 'index.html', format="rdfa") # load the RDFa-based dataset
 			
+			self.response.headers.add_header("Access-Control-Allow-Origin", "*") # CORS-enabled
 			if format == 'rdf-xml':
 				self.response.headers['Content-Type'] = 'application/rdf+xml'
 				self.response.out.write(g.serialize())
@@ -98,10 +100,47 @@ class FormatHandler(webapp.RequestHandler):
 				# based on https://bitbucket.org/okfn/openbiblio/src/tip/rdflib/
 				self.response.headers['Content-Type'] = 'application/json'
 				self.response.out.write(g.serialize(None, "rdf-json-pretty"))
+			elif format == 'csv':
+				self.response.headers['Content-Type'] = 'text/csv'
+				self.response.out.write(self.dump_csv(g))
 		elif format =='':
-			self.response.out.write("<div>Supported output formats:</div><ul>")
+			self.response.out.write("<div>Supported output formats or go back [<a href='/'>home</a>]:</div><ul>")
 			for format in SUPPORTED_OUTPUT_FORMATS:
 				self.response.out.write("".join(["<li>", "<a href='../format/", format, "'>", format , "</a></li>"]))
 			self.response.out.write("</ul>")
 		else:
 			self.response.out.write(template.render('a404.html', None))
+	
+	def dump_csv(self, graph):
+		outbuffer = StringIO.StringIO()
+		csvdata = csv.writer(outbuffer, delimiter=',')
+		qstr = """
+		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		PREFIX owl: <http://www.w3.org/2002/07/owl#>
+		PREFIX org: <http://www.w3.org/ns/org#>
+		PREFIX dct: <http://purl.org/dc/terms/> 
+		PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+		PREFIX eui: <http://institutions.publicdata.eu/#>
+
+		SELECT ?org ?name ?description ?hp ?wikipedia WHERE {
+		 ?euib rdfs:subClassOf org:Organization .
+		 ?org a ?euib ;
+		      dct:title ?name ;
+		      dct:description ?description ;
+		      foaf:homepage ?hp ;
+		      owl:sameAs ?wikipedia . 
+		}
+		"""
+		
+		try:
+			res = graph.query(qstr)
+			csvdata.writerow(["ORG_ID", "NAME", "DESCRIPTION", "HOMEPAGE", "WIKIPEDIA_LINK"])
+			for r in res:
+				csvdata.writerow(r)
+		except csv.Error, e:
+			logging.info('[API] CSV output error %s' %e)
+			
+		data = outbuffer.getvalue()
+		outbuffer.close()
+		return data

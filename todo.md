@@ -6,7 +6,7 @@ Michael:
  3. DONE Make URI's explict
  4. DONE add rdflib and provide alternative formats: RDF/XML, Turtle, JSON, etc. 
  5. DONE SPARQL interface
- 6. STARTE: VoID description (missing: vocab, publisher, well-known)
+ 6. STARTED: VoID description (missing: vocab, publisher, well-known)
  7. lookup service
 
 Anja:
