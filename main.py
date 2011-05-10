@@ -25,6 +25,7 @@ application = webapp.WSGIApplication([
 						(r'/about/(.*)$', AboutHandler),
 						(r'/query/(.*)$', QueryHandler),
 						(r'/format/(.*)$', FormatHandler),
+						(r'/usage/(.*)$', UsageHandler),
 						(r'/', MainHandler),
 						(r'/.*', NotFoundHandler)
 					],

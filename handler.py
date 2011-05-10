@@ -55,6 +55,14 @@ class AboutHandler(webapp.RequestHandler):
 	def get(self, details):
 		self.response.out.write(template.render('about.html', None))
 
+class UsageHandler(webapp.RequestHandler):
+	def get(self, upath):
+		if upath == 'json-example':
+			self.response.out.write(template.render('usage/standalone-json.html', None))
+		else:
+			self.error(404)
+			self.response.out.write(template.render('a404.html', None))
+
 class QueryHandler(webapp.RequestHandler):
 	def get(self, q):
 

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+	<meta charset="utf-8">
+	<title>Using the JSON data from http://institutions.publicdata.eu/</title>
+	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#listorgs").click(function () {
+			
+			$.ajax({
+				type: "GET",
+				url: "/format/json",
+				dataType: "json",
+				success: function(res){
+					var b = "";
+					if(res) {
+						for(i in res) {
+							if(i.indexOf("http://institutions.publicdata.eu/") === 0) { // exclude the namespace declarations
+								b += "<div>" + res[i]["dct$title"][0]["value"] + "</div>";
+							}
+						}
+						$("#out").html(b);
+					}
+					else {
+						$("#out").html("No data available"); 
+					}
+				},
+				error:  function(XMLHttpRequest, textStatus, errorThrown){
+					alert(textStatus + " " + errorThrown);
+				} 
+			});
+		});
+	});
+	</script>
+</head>
+<body style="margin: 1em; padding: 1em">
+ <button id="listorgs">List organisations!</button>
+ <div id="out" style="padding: 1em">When you hit the above button you should see the names of all EU organisations in the dataset ...</div>
+</body>
+</html>

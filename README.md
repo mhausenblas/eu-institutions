@@ -2,9 +2,9 @@
 
 This is a LOD dataset about 'Institutions of the European Union' originally deployed on [GAE](http://eu-institutions.appspot.com/).
 
+Michael and Anja from the [LATC Support Action](http://latc-project.eu/) are developing and maintaining it.
+
 ## Using
-
-
 
 ### SPARQL Query Example
 
@@ -23,8 +23,13 @@ Go to [sparql.org](http://sparql.org/sparql.html) and paste in the following que
 	      owl:sameAs ?alias .
 	}
 
-### Using the data as JSON from a Web page
-TBD ...
+### Using the JSON data from within a Web page
 
-### Using the data in a Google spreadsheet
-TBD ...
+The site is [CORS-enabled](http://enable-cors.org/), so you can directly use the data in your Web page. For a simple example how to use the JSON data from within a Web page, see the '[standalone json](https://github.com/mhausenblas/eu-institutions/blob/master/usage/standalone-json.html)' HTML file.
+
+### Using the CSV data in a Google spreadsheet
+Import the [CSV data](http://eu-institutions.appspot.com/format/csv) in a Google spreadsheet.
+
+## License
+
+This software is Public Domain.
