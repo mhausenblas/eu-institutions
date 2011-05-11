@@ -54,7 +54,7 @@ a:hover {
 
 
 .entity a {
-	color: #d0d0d0;
+	color: #a0a0a0;
 }
 
 .entity a:hover {
@@ -136,11 +136,10 @@ a:hover {
 	font-size: 8pt;
 	margin: 0 .3em 0 .3em;
 	padding: .2em .2em 0 .2em;
-	color: #d0d0d0;
-	border: 1px solid #d0d0d0;
+	border: 1px solid #a0a0a0;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
-	border-radius: 2px;	
+	border-radius: 2px;
 }
 
 .entity-hover {
@@ -200,4 +199,8 @@ a:hover {
 .qcmd {
 	text-align: left;
 	margin: 0 1em 1em 1em;
+}
+
+.hidden-metadata {
+	display: none;
 }
