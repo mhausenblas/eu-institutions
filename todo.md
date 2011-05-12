@@ -9,7 +9,8 @@
  5. DONE SPARQL interface
  6. DONE: VoID description (also: .well-known/void)
  7. OPEN: locations of all orgs
- 8. OPEN: redirect from  http://institutions.publicdata.eu with Soeren
+ 8. OPEN: include a  'why are we doing this?' section in about (re coverage, canonical IDs, etc.)
+ 9. OPEN: redirect from  http://institutions.publicdata.eu with Soeren
 
 ## Anja
 
