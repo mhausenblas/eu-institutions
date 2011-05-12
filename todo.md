@@ -8,7 +8,7 @@
  4. DONE add rdflib and provide alternative formats: RDF/XML, Turtle, JSON, etc. 
  5. DONE SPARQL interface
  6. DONE: VoID description (also: .well-known/void)
- 7. OPEN: locations of all orgs
+ 7. OPEN: Cross-check if all LATC/WP2 institutions are covered (hint: Eurostat)
  8. OPEN: include a  'why are we doing this?' section in about (re coverage, canonical IDs, etc.)
  9. OPEN: redirect from  http://institutions.publicdata.eu with Soeren
 
@@ -16,7 +16,8 @@
 
  1. DONE modelling using [org vocab](http://www.epimorphics.com/public/vocabulary/org.html) etc. creating examples in models.ttl
  2. DONE interlinking targets (conceptual)
- 3. OPEN: complete 'Decentralised Bodies'
+ 3. DONE: complete 'Decentralised Bodies'
+ 4. STARTED: locations of all orgs
 
 ## Ideas
 
